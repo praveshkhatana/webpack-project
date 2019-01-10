@@ -1,0 +1,47 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "noEmitHelpers": true,
+        "noEmitOnError": true,
+        "declaration": true,
+        "noImplicitAny": false,
+        "removeComments": false,
+        "watch": false,
+        "noLib": false,
+        "preserveConstEnums": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "noImplicitUseStrict": true,
+        "skipLibCheck": true,
+        "importHelpers": true,
+        "types": [
+            "node"
+        ],
+        "lib": [
+            "es6",
+            "dom",
+            "es2015.iterable"
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "~/*": [
+                "app/*"
+            ],
+            "*": [
+                "./node_modules/tns-core-modules/*",
+                "./node_modules/*"
+            ]
+        }
+    },
+    // "include": [
+    //     "**/*.ts",
+    //     "./node_modules/nativescript-twilio-video/*",
+    //     "./node_modules/nativescript-twilio-video/src/**/*"
+    // ],
+    "exclude": [
+        "node_modules",
+        "platforms"
+    ]
+}

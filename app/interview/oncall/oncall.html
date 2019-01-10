@@ -1,0 +1,36 @@
+<GridLayout rows="*" columns="*">
+    <StackLayout height="0" width="0">
+        <Label [text]="isAnimating"></Label>
+    </StackLayout>
+    <StackLayout class="v-container-r">
+        <RemoteVideo #remoteVideo height="100%"></RemoteVideo>
+    </StackLayout>
+    <AbsoluteLayout>
+        <StackLayout #localV class="v-container" (tap)="toggle_local_video_size()">
+            <LocalVideo #localVideo height="100%"></LocalVideo>
+        </StackLayout>
+    </AbsoluteLayout>
+    <StackLayout>
+        <LottieView [src]="src" [loop]="loop" [autoPlay]="autoPlay" (loaded)="lottieViewLoaded($event)">
+        </LottieView>
+    </StackLayout>
+    <GridLayout class="top-time" verticalAlignment="top">
+        <Label [text]="message" class="minutes-text text-center white-color" verticalAlignment="bottom" textWrap="true"></Label>
+    </GridLayout>
+
+
+    <GridLayout rows="*" class="icons-bar white-color " columns="*,*,*" verticalAlignment="bottom">
+        <StackLayout (tap)="likeTap()" col="0" class="p-l-5" verticalAlignment="middle">
+            <StackLayout class="oval padding-top-thumb background-icon-thumb">
+                <Image width="20" height="20" src="res://thumb"></Image>
+            </StackLayout>
+
+        </StackLayout>
+
+        <StackLayout col="1" height="80" width="80">
+            <hg-circular-progress-bar size="80" text="END" (tap)="endTap()"></hg-circular-progress-bar>
+        </StackLayout>
+
+    </GridLayout>
+
+</GridLayout>

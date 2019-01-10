@@ -1,0 +1,19 @@
+// Import the theme
+@import '~nativescript-theme-core/scss/light';
+// Customize any of the theme’s variables here
+// Import the theme’s main ruleset.
+@import '~nativescript-theme-core/scss/index';
+
+// your theme
+// @import 'theme/sass/index';
+.dimmer{
+    background-color: rgba(35,43,65,0.12);
+}
+.activity-indicator
+{
+    color: #ffffff;
+    background-color: rgba(241,151,31,.8);
+    border-radius: 50;
+    width:50;
+    height:50;
+}
